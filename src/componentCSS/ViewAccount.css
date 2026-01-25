@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* FIXED SCANNING EFFECT */
+.view-box-glow::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 200, 0.1), transparent);
+  animation: signup-scan-line 4s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes view-scan {
+  0% { 
+    top: -100px; 
+  }
+  100% { 
+    top: 100%; 
+  }
+}
+
+/* Typing Animation for ACCOUNT_DETAILS (15 chars) */
+.view-typing-title {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: 
+    view-type-anim 1.5s steps(15) 0.5s forwards, 
+    view-blink-anim 0.8s step-end infinite;
+}
+
+@keyframes view-type-anim { 
+  from { width: 0; }
+  to { width: 100%; } 
+}
+
+@keyframes view-blink-anim { 
+  from, to { border-color: transparent; }
+  50% { border-color: #22d3ee; } 
+}
+
+/* Popup entry animation */
+.popup-animation {
+  animation: popup-scale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popup-scale {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
