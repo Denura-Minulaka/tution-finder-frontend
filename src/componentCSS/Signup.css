@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Scanning Line Effect using ::before */
+.signup-box-glow::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 200, 0.1), transparent);
+  animation: signup-scan-line 4s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes signup-scan-line {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* Typing Animation for USER_SIGNUP */
+.signup-typing-title {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: 
+    signup-type-anim 2s steps(11) 0.5s forwards, 
+    signup-blink-anim 0.8s step-end infinite;
+}
+
+@keyframes signup-type-anim {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes signup-blink-anim {
+  from, to { border-color: transparent; }
+  50% { border-color: #22d3ee; }
+}
+
+/* Internal Scrollbar for dropdown list */
+.custom-dropdown-list::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-dropdown-list::-webkit-scrollbar-thumb {
+  background: #22d3ee;
+  border-radius: 10px;
+}
