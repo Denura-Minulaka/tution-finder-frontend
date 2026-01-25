@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* SCANNING LINE ANIMATION (The ::before element) */
+.login-box-glow::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 200, 0.1), transparent);
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes scan {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* TYPING AND BLINKING CURSOR */
+.typing-title {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation:
+    typeLogin 2s steps(10) forwards,
+    blinkCursor 0.8s step-end infinite;
+}
+
+@keyframes typeLogin {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCursor {
+  from, to { border-color: transparent; }
+  50% { border-color: #22d3ee; }
+}
+
+/* CUSTOM SCROLLBAR FOR DROPDOWN */
+.custom-dropdown-list::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-dropdown-list::-webkit-scrollbar-thumb {
+  background: #22d3ee;
+  border-radius: 10px;
+}
