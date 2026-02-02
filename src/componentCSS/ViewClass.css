@@ -1,0 +1,30 @@
+/* Schedule Slide Animation */
+@keyframes loading-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+/* Transitions for Schedule Squares */
+.group:hover .text-emerald-500 {
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.w-40 {
+  width: 10rem; /* 160px */
+}
+
+.h-40 {
+  height: 10rem; /* 160px */
+}
+
+/* Immersion Line */
+hr {
+  opacity: 0.1;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+/* Make sure the schedule row wraps nicely */
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}

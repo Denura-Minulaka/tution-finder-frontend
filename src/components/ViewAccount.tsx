@@ -137,7 +137,7 @@ export default function ViewAccount() {
                 className="flex-1 py-3 bg-[#222] border border-neutral-700 text-neutral-400 font-bold rounded uppercase text-xs hover:bg-neutral-800 hover:text-white transition-colors" 
                 onClick={() => setShowConfirm(false)}
               >
-                Abort
+                Cancel
               </button>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function ViewAccount() {
             onClick={() => navigate("/edit")} 
             className="flex-1 py-3 border border-cyan-500/30 text-cyan-500 hover:text-white hover:bg-cyan-500/10 rounded-sm uppercase text-[10px] md:text-xs tracking-[4px] transition-all order-2 sm:order-1"
           >
-            EDIT_CORE
+            EDIT ACCOUNT
           </button>
           <button 
             onClick={() => setShowConfirm(true)} 

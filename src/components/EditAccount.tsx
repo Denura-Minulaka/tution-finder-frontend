@@ -213,13 +213,13 @@ export default function EditAccount() {
                 onClick={() => navigate("/account")} 
                 className="flex-1 py-3 border border-neutral-700 text-neutral-500 hover:text-white hover:bg-neutral-900 rounded uppercase text-[10px] tracking-[2px] transition-all"
             >
-                Abort
+                Cancel
             </button>
             <button 
                 type="submit" 
                 className="flex-[2] py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-bold rounded uppercase shadow-[0_0_15px_rgba(0,150,255,0.4)] hover:shadow-[0_0_30px_rgba(0,255,200,0.6)] transition-all text-xs tracking-[2px]"
             >
-                Sync Changes
+                Save Changes
             </button>
           </div>
 

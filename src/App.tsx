@@ -8,6 +8,10 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import TeacherHome from "./components/TeacherHome";
+import AddClass from "./components/AddClass";
+import ViewClass from "./components/ViewClass";
+import EditClass from "./components/EditClass";
 
 function App() {
 
@@ -25,6 +29,10 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/account" element={<ViewAccount />} />
             <Route path="/edit" element={<EditAccount />} />
+            <Route path="/TeacherHome" element={<TeacherHome />} />
+            <Route path="/AddClass" element={<AddClass />} />
+            <Route path="/ViewClass/:id" element={<ViewClass />} />
+            <Route path="/EditClass/:id" element={<EditClass />} />
           </Routes>
           
         </div>

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+/* Cyber Scanning Animation */
+.add-class-box-glow::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 200, 0.1), transparent);
+  animation: class-scan-line 4s linear infinite; /* Fixed: matches the keyframe name below */
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes class-scan-line {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* Typing Animation */
+.emerald-typing {
+  display: inline-block;
+  overflow: hidden; /* Ensures text stays hidden until typed */
+  white-space: nowrap; /* Keeps text on one line */
+  width: 0;
+  border-right: 3px solid #10b981; /* The cursor */
+  animation: 
+    class-type 2s steps(20) 0.5s forwards,
+    cursor-blink 0.8s step-end infinite; /* Makes cursor blink */
+}
+
+@keyframes class-type {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor Blink Animation */
+@keyframes cursor-blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #10b981; }
+}
+
+/* --- GLOBAL CYAN SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22d3ee; 
+  border-radius: 10px;
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #22d3ee #000000;
+}
